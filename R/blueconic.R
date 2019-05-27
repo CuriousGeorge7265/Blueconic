@@ -18,7 +18,7 @@ blueconic <- function(input){
   df <- if(is.character(input) && file.exists(input)){
     read.csv(input)
   } else {
-   input
+   as.data.frame(input)
   }
   df = df[,!sapply(df, function(x) mean(is.na(x)))>0.5]
   #Remove useless or repetitive variables
