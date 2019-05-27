@@ -1,0 +1,12 @@
+Package: blueconic
+Title: Score data to predict product type
+Version: 0.0.0.9000
+Date: 2019-05-27
+Authors@R: person(Lizzie Jy Wu & Minxin He)
+Description: Predict product type with Blueconic data.
+Depends:  R (>= 2.10)
+License: Apache License 2.0
+Encoding: UTF-8
+LazyData: false
+RoxygenNote: 6.1.1
+Imports : mgcv
