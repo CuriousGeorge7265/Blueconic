@@ -11,15 +11,7 @@ blueconic <- function(input){
   new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
   if(length(new.packages)) install.packages(new.packages)
   library(dplyr)
-  
-  #Drop columns with more than 10% of missing values
-  #-----------------
-  #input can either be csv file or data	
-  df <- if(is.character(input) && file.exists(input)){
-    read.csv(input)
-  } else {
-   as.data.frame(input)
-  }
+ 
   df = df[,!sapply(df, function(x) mean(is.na(x)))>0.5]
   #Remove useless or repetitive variables
   drop <- c("profileid","aov_restoretokenurl","aov_token","entrypage","gclid",
