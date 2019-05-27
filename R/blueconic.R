@@ -1,6 +1,6 @@
 #' A blueconic Function
 #'
-#' This function allows you to express your love of cats.
+#' This function allows you to predict prodcut type using blueconic data.
 #' @param data formatted as Blueconic data from Hackthon 2019
 #' @keywords blueconic
 #' @export
