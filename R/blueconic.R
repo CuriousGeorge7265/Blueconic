@@ -46,7 +46,7 @@ blueconic <- function(input){
   
   #Convert certain columns' date format
   #-----------------
-  df$year <- format(as.Date(df$dummy_date_of_birth, format="%Y-%m-%d"),"%Y")
+  df$year <- format(as.Date(factor(df$dummy_date_of_birth), format="%Y-%m-%d"),"%Y")
   df$year <- as.numeric(df$year)
   df <- select(df, -matches("dummy_date_of_birth"))
   
