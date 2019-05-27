@@ -11,7 +11,7 @@ blueconic <- function(df){
   new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
   if(length(new.packages)) install.packages(new.packages)
   library(dplyr)
- 
+  df <- as.data.frame(df)
   df = df[,!sapply(df, function(x) mean(is.na(x)))>0.5]
   #Remove useless or repetitive variables
   drop <- c("profileid","aov_restoretokenurl","aov_token","entrypage","gclid",
